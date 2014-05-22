@@ -17,5 +17,5 @@ end
 
 
 get '/submit' do
-  erb :show
+  erb :submit
 end
