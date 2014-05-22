@@ -15,7 +15,17 @@ get '/' do
 end
 
 
-
 get '/submit' do
   erb :submit
 end
+
+post '/submit' do
+  title = params["title"]
+  url = params["url"]
+  description = params["description"]
+  File.open("submissions.csv", 'a+') do |file|
+    file.puts("#{title},#{url},#{description}")
+  end
+  redirect "/"
+end
+
