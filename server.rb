@@ -7,12 +7,10 @@ require 'json'
 require 'pry'
 
 result = get_api('http://api.ihackernews.com/page')
-csv_file = read_csv("submissions.csv")
-
 
 get '/' do
   @result = result
-  @new_info = csv_file
+  @new_info = read_csv("submissions.csv")
   @index = 0
   erb :index
 end

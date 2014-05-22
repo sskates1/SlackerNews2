@@ -17,7 +17,7 @@
 <% @new_info["items"].each do |article| %>
   <ul class="article">
     <li><%= @index += 1 %>. </li>
-    <li><a href="<%= article["url"] %>"><%= article["title"] %></a></li>
+    <li><a href="http://<%= article["url"] %>"><%= article["title"] %></a></li>
     <li><%= strip_url(article["url"]) %></li>
   </ul>
     <ul class="article-subtitle">
