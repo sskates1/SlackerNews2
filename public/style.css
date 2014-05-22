@@ -1,0 +1,45 @@
+
+
+
+* {
+ padding: 0;
+ margin: 0;
+}
+
+
+
+.container{
+  background-color: #F6F6EF  ;
+  margin: 0 auto;
+  max-width: 920px;
+  font-family: verdana;
+  font-size: 10pt;
+}
+
+.icon{
+  border:1px solid white
+
+}
+
+.header{
+  padding: 46px;
+  padding-bottom: 60px;
+  font-size: 8pt;
+}
+
+
+.article li {
+  display:inline;
+  font-size: 13px
+
+}
+.article-subtitle li {
+  display:inline;
+  font-size: 9px;
+  font-color: #838383;
+}
+  h1 {
+    color: black;
+    background-color: #ff6600;
+  }
+

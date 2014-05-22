@@ -1,0 +1,14 @@
+
+<% @result["items"].each_with_index do |article, index| %>
+  <ul class="article">
+    <li><%= index + 1 %>. </li>
+    <li><%= article["title"] %></li>
+    <li><%= strip_url(article["url"]) %></li>
+  </ul>
+  <ul class="article-subtitle">
+    <li><%= article["points"] %> points</li>
+    <li>by <%= article["postedBy"] %></li>
+    <li><%= article["postedAgo"] %></li>
+    <li>| <%= article["commentCount"] %> comments</li>
+  </ul>
+<% end %>
