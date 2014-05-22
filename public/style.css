@@ -33,6 +33,12 @@
   font-size: 13px
 
 }
+
+.article > li > a {
+  color: #000000;
+  text-decoration: none;
+}
+
 .article-subtitle li {
   display:inline;
   font-size: 9px;

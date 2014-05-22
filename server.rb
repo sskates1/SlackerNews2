@@ -4,13 +4,16 @@ require_relative "server_methods"
 require 'sinatra'
 require 'net/http'
 require 'json'
+require 'pry'
 
-# helpers do
 result = get_api('http://api.ihackernews.com/page')
-# end
+csv_file = read_csv("submissions.csv")
+
 
 get '/' do
   @result = result
+  @new_info = csv_file
+  @index = 0
   erb :index
 end
 
@@ -23,8 +26,9 @@ post '/submit' do
   title = params["title"]
   url = params["url"]
   description = params["description"]
+  timestamp = Time.now
   File.open("submissions.csv", 'a+') do |file|
-    file.puts("#{title},#{url},#{description}")
+    file.puts("#{title},#{url},#{description},#{timestamp}")
   end
   redirect "/"
 end
